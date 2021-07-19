@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Catamaran";
+  src: url("/fonts/Catamaran/Catamaran-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
 html,
 body {
   padding: 0;
