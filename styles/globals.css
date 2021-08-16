@@ -22,3 +22,25 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+--red: #D61D1D;
+--blue: #154B82;
+--shadow: #CCCCCC;
+}
+
+.follow div {
+  margin-left: 2px !important;
+}
+
+.inline-icon div {
+  margin-right: 4px !important;
+}
+
+.card div {
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+  border-radius: 5px;
+  left: 0;
+}
