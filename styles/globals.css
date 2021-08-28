@@ -58,6 +58,16 @@ a {
   display: none;
 }
 
+.card div {
+  z-index: -1;
+}
+
+@media (max-width: 460px) {
+  main .wrapper {
+    margin-bottom: 8rem !important;
+  }
+}
+
 @media (max-width: 960px) {
   #contact {
     grid-template-columns: 1fr !important;

@@ -102,7 +102,6 @@ export default function Home() {
         <div className="separator-info d-flex">
           <div id="info" className="text-center">
             <h3>How It Works</h3>
-            <hr></hr>
             <p>
               We usually meet on Tuesdays in the afternoon. We announce the time and venue on the weekends via our Instagram account. <br/>
               The meetings usually last 2 hours. We speak English the whole time and, while we allow speakers of any level to join, we do ask everyone to avoid speaking Spanish out of respect for those looking to practise their English.
@@ -295,7 +294,8 @@ export default function Home() {
         .hero h2 {
           margin: 0;
           max-width: 20ch;
-          font-size: clamp(3rem, 4vw, 4.4rem);
+          font-size: clamp(2.4rem, 4vw, 4.4rem);
+          line-height: clamp(4rem,5vw,6rem);
         }
 
         .hero p {
@@ -359,7 +359,7 @@ export default function Home() {
         }
 
         .columns p {
-          font-size: clamp(.5rem, .8vw, 0.98rem);
+          font-size: clamp(.8rem, .8vw, 0.98rem);
           text-align: start;
         }
 
@@ -374,11 +374,12 @@ export default function Home() {
           color: white;
           padding: 0 !important;
           display: flex;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.76%, rgba(0, 0, 0, 0.7) 75.18%);
         }
         
         .card h3 {
           position: relative;
-          font-size: 1.2rem;
+          font-size: clamp(1.2rem, 1.3vw, 1.6rem);
           align-self: flex-end;
           margin: 0.8em;
         }
@@ -386,7 +387,7 @@ export default function Home() {
         .separator {
           position: relative;
           display: grid;
-          grid-template-columns: 1fr 2fr 1fr;
+          grid-template-columns: 1fr 4fr 1fr;
           margin-top: 4rem;
           padding: 1rem;
         }
@@ -414,14 +415,18 @@ export default function Home() {
           font-size: 2.8rem;
         }
 
-        .separator-info hr {
-          margin: auto auto;
-          border: 2px solid var(--red);
-          width: 10%;
+        .separator-info h3:after {
+          background-color: var(--red);
+          content: "";
+          display: block;
+          height: 6px;
+          margin-top: 10px;
+          margin: auto;
+          width: 60px;
         }
 
         :is(.separator, .separator-info) p {
-          font-size: clamp(.5rem, .8vw, 0.98rem);
+          font-size: clamp(.8rem, .8vw, 0.98rem);
           max-width: 90ch;
           color: white;
           margin-left: auto;
@@ -465,14 +470,13 @@ export default function Home() {
         }
 
         .white p {
-          font-size: 10px;
+          font-size: .8rem;
           margin: 0;
         }
 
         #info {
           margin: 1rem;
           padding: 1rem;
-          opacity: 0.8;
           border-radius: 3px;
         }
 
@@ -499,7 +503,7 @@ export default function Home() {
           grid-gap: 0.8rem;
           margin: 2.5rem auto;
           padding: min(1rem, 2rem);
-          width: fit-content;
+          min-width: fit-content;
           border-radius: 5px;
         }
 
@@ -513,7 +517,7 @@ export default function Home() {
 
         #contact p {
           color: white;
-          font-size: 10px;
+          font-size: .8rem;
           text-align: start;
           max-width: 26ch;
         }
@@ -556,11 +560,11 @@ export default function Home() {
 
         .text-white {
           color: white;
-          font-size: 14px;
+          font-size: .8rem;
         }
 
         .font-size {
-          font-size: 10px !important
+          font-size: .8rem !important
         }
 
         .border-radius {
