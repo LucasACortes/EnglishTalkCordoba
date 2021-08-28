@@ -20,7 +20,7 @@ export default function Home() {
 
       <nav>
         <div className="brand">
-          <Image src="/images/etlogoavatar.png" alt="" width="60" height="60" />
+          <Image src="/icons/g24.svg" alt="" width="40" height="40" />
           <h1 id="title">English Talk</h1>
         </div>
 
@@ -41,11 +41,13 @@ export default function Home() {
         <div className="wrapper">
           <div className="hero">
             <h2>A space for social interaction in English</h2>
-            <p>We hold weekly events for locals who want practice their English and foreigners looking to socialise.</p>
+            <p>We hold weekly events for locals who want to practise their English and foreigners looking to socialise.</p>
             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/englishtalkcba/" className="follow">Follow Us!  <Image src="/icons/instagram.svg" alt="" width="12" height="12" /></a>
           </div>
           <div id="image-container">
-            <Image src="/svg/ellipse.svg" alt="" width="500" height="400" />
+            <div id="clipped-background">
+              <Image src="/svg/ellipse.svg" alt="" width="500" height="400" />
+            </div>
             <div id="clipped">
               <Image src="/images/group.png" alt="" width="450" height="360" />
             </div>
@@ -54,19 +56,19 @@ export default function Home() {
 
         <div className="columns">
           <div>
-            <Image src="/icons/money-off.svg" alt="" width="40" height="40" />
+            <Image src="/icons/money-off.svg" alt="" width="60" height="60" />
             <h3>Our Meetings Are Free</h3>
             <p>Everyone is welcome to join our group. We do not charge money to participate and we often offer snacks for free.</p>
           </div>
           <div>
-            <Image src="/icons/user-heart.svg" alt="" width="40" height="40" />
+            <Image src="/icons/user-heart.svg" alt="" width="60" height="60" />
             <h3>We Make It Less Awkward</h3>
-            <p>It's scary and awkward to approach a group of strangers and ask them to speak with you, but it's less so when you have a group of team leaders guiding the conversation based on a topic of general interest with questions.</p>
+            <p>It&apos;s scary and awkward to approach a group of strangers and ask them to speak with you, but it&apos;s less so when you have a group of team leaders guiding the conversation based on a topic of general interest with questions.</p>
           </div>
           <div>
-            <Image src="/icons/groups.svg" alt="" width="40" height="40" />
-            <h3>The Goal Is To Socialise</h3>
-            <p>Most English conversation groups focus on either clubbing or learning academic English. While we don't shy away from parties and education, we're known for hanging out at the park and getting to know each other while having merienda.</p>
+            <Image src="/icons/groups.svg" alt="" width="60" height="60" />
+            <h3>The Goal Is to Socialise</h3>
+            <p>Most English conversation groups focus on either clubbing or learning academic English. While we don&apos;t shy away from parties and education, we&apos;re known for hanging out at the park and getting to know each other while having merienda.</p>
           </div>
           <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/englishtalkcba/" className="follow" id="separate-follow">Follow Us!  <Image src="/icons/instagram.svg" alt="" width="12" height="12" /></a>
         </div>
@@ -92,7 +94,7 @@ export default function Home() {
           </div>
           <div className="card">
             <Image src="/images/card-photo-3.png" alt="" width="300" height="300" />
-            <h3>Develop A Sence of Community</h3>
+            <h3>Develop a Sense of Community</h3>
           </div>
           <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/englishtalkcba/" className="follow" id="separate-follow">Follow Us!  <Image src="/icons/instagram.svg" alt="" width="12" height="12" /></a>
         </div>
@@ -134,7 +136,7 @@ export default function Home() {
         </div>
       </main>
 
-      <svg width="0" height="0">
+      <svg style={{ position: 'absolute' }} width="0" height="0">
         <defs>
           <clipPath id="clip">
             <path id="wave" d="M639.252 488.355C240.466 596.031 62.5876 570.415 -16.7477 488.355L-24 0H1944V687C1685.06 604.552 1025.26 384.13 639.252 488.355Z"/>
@@ -143,7 +145,7 @@ export default function Home() {
         </defs>
       </svg>
 
-      <svg width="0" height="0">
+      <svg style={{ position: 'absolute' }} width="0" height="0">
         <defs>
           <clipPath id="image">
             {/*<path d="M 60 40 C 60 40, 400 0, 480 20 S 480 280, 460 320 S 0 400, 20 280 S 0 80, 60 40"/>*/}
@@ -184,7 +186,7 @@ export default function Home() {
         }
 
         #wave {
-          transform: translate(0px, -600px) scale(2);
+          transform: translate(0px, 0px) scale(1);
         }
 
         #background {
@@ -197,6 +199,8 @@ export default function Home() {
         }
 
         nav {
+          margin-left: 5%;
+          margin-right: 5%;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
         }
@@ -205,7 +209,9 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 16px;
+          gap: 1ch;
+          width: max-content;
+          margin: auto;
         }
 
         .navigation {
@@ -220,17 +226,22 @@ export default function Home() {
           font-weight: normal;
           width: auto;
           color: white;
+          font-size: 1.4rem;
         }
 
         .content {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          justify-self: normal;
+          justify-self: end;
           text-align: center;
+          width: fit-content;
+          padding-right: 1rem;
         }
 
         .content a {
           color: white;
+          padding-left: 1rem;
+          padding-right: 1rem;
         }
 
         .links {
@@ -256,7 +267,6 @@ export default function Home() {
           display: grid;
           align-items: start;
           justify-content: start;
-          grid-template-columns: 1fr 1fr;
           text-align: center;
         }
 
@@ -264,7 +274,6 @@ export default function Home() {
           display: grid;
           align-items: start;
           justify-content: start;
-          grid-column: 1/3;
           grid-template-columns: 1fr 1fr;
           text-align: center;
         }
@@ -272,11 +281,13 @@ export default function Home() {
         main .wrapper {
           margin-left: 12%;
           margin-right: 12%;
+          margin-bottom: 12em;
         }
         
         .hero {
+          margin-top: 2rem;
           text-align: start;
-          font-size: 32px;
+          font-size: 3rem;
           color: white;
           display: flow-root;
         }
@@ -284,11 +295,14 @@ export default function Home() {
         .hero h2 {
           margin: 0;
           max-width: 20ch;
+          font-size: clamp(3rem, 4vw, 4.4rem);
         }
 
         .hero p {
-          font-size: 16px;
-          max-width: 46ch;
+          margin: 0;
+          max-width: 20ch;
+          font-size: clamp(1rem, 1.2vw, 1.2rem);
+          max-width: 48ch;
         }
 
         #image-container {
@@ -308,11 +322,11 @@ export default function Home() {
         .follow {
           color: white;
           background-color: var(--blue);
-          padding: 0.4em;
+          padding: 0.6rem;
           padding-left: 1em;
           padding-right: 1em;
           border-radius: 5px;
-          font-size: 14px;
+          font-size: 1rem;
         }
 
         #separate-follow {
@@ -322,9 +336,8 @@ export default function Home() {
         }
 
         .columns {
-          margin-top: 6em;
-          grid-column: 1/3;
-          width: 60%;
+          margin-top: 4em;
+          width: 66%;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           grid-gap: 2em;
@@ -339,29 +352,35 @@ export default function Home() {
         }
 
         .columns h3 {
+          font-size: clamp(1.2rem, 1.4vw, 1.7rem);
           text-align: start;
           margin-top: 0px;
           margin-bottom: 0px;
         }
 
         .columns p {
-          font-size: 10px;
+          font-size: clamp(.5rem, .8vw, 0.98rem);
           text-align: start;
+        }
+
+        .photos .card::before {
+          content: "";
+          display: block;
+          padding-top: 80%;
         }
 
         .card {
           position: relative;
           color: white;
           padding: 0 !important;
-          height: 244px;
           display: flex;
         }
         
         .card h3 {
           position: relative;
-          font-size: 14px;
+          font-size: 1.2rem;
           align-self: flex-end;
-          margin: 0.4em;
+          margin: 0.8em;
         }
 
         .separator {
@@ -370,13 +389,11 @@ export default function Home() {
           grid-template-columns: 1fr 2fr 1fr;
           margin-top: 4rem;
           padding: 1rem;
-          grid-column: 1/3;
         }
 
         .separator-info {
           position: relative;
-          background: url(/images/background.png);
-          grid-column: 1/3;
+          background-image: linear-gradient(360deg, #154B82 12%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/background.png);
           display: flex;
           justify-content: center;
           margin-top: 4rem;
@@ -385,7 +402,7 @@ export default function Home() {
 
         :is(.separator, .separator-info) h3 {
           color: white;
-          font-size: 18px;
+          font-size: clamp(1.2rem, 1.4vw, 1.7rem);
           max-width: 46ch;
           margin-left: auto;
           margin-right: auto;
@@ -394,7 +411,7 @@ export default function Home() {
         .separator-info h3 {
           margin: 0;
           max-width: 100% !important;
-          font-size: 32px;
+          font-size: 2.8rem;
         }
 
         .separator-info hr {
@@ -404,7 +421,7 @@ export default function Home() {
         }
 
         :is(.separator, .separator-info) p {
-          font-size: 10px;
+          font-size: clamp(.5rem, .8vw, 0.98rem);
           max-width: 90ch;
           color: white;
           margin-left: auto;
@@ -412,7 +429,7 @@ export default function Home() {
         }
 
         .separator-info p {
-          font-size: 12px;
+          font-size: 0.98rem;
           max-width: 92ch;
         }
 
@@ -428,8 +445,8 @@ export default function Home() {
 
         footer {
           display: flex;
-          padding-left: 10%;
-          padding-right: 10%;
+          padding-left: 5%;
+          padding-right: 5%;
           justify-content: space-between;
         }
 
@@ -478,11 +495,10 @@ export default function Home() {
 
         #contact {
           display: grid;
-          grid-column: 1/3;
           grid-template-columns: 1fr 2fr;
           grid-gap: 0.8rem;
           margin: 2.5rem auto;
-          padding: 2rem;
+          padding: min(1rem, 2rem);
           width: fit-content;
           border-radius: 5px;
         }
