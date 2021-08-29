@@ -7,8 +7,8 @@ export default function Home() {
     <div className="container">
       <div id="background"></div>
       <Head>
-        <title>English Talk</title>
-        <meta name="description" content="Description" />
+        <title>English-speaking Events in Cordoba, Argentina - English Talk</title>
+        <meta name="description" content="English Talk is a space where foreigners and locals can meet to speak English and socialise in Cordoba, Argentina. Never miss our events, follow us on Instagram!" />
         <link rel="icon" href="/favicon.svg" />
         <link
             rel="preload"
@@ -41,7 +41,7 @@ export default function Home() {
         <div className="wrapper">
           <div className="hero">
             <h2>A space for social interaction in English</h2>
-            <p>We hold weekly events for locals who want to practise their English and foreigners looking to socialise.</p>
+            <p>We hold weekly events for locals who want to practise their English and foreigners looking to socialise in Cordoba, Argentina.</p>
             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/englishtalkcba/" className="follow">Follow Us!  <Image src="/icons/instagram.svg" alt="" width="12" height="12" /></a>
           </div>
           <div id="image-container">
