@@ -77,10 +77,35 @@ export default function Home() {
           <div id="big-logo">
             <Image src="/favicon.svg" alt="" width="286" height="340" />
           </div>
+          <div id="logo-mobile">
+            <Image src="/icons/g20.svg" alt="" width="142" height="167" />
+          </div>
           <div id="about">
             <h3>English Talk! is a space where locals and foreigners can meet to practise their English and socialise</h3>
             <p>The group was created in 2007 by David Fulfer in Córdoba, Argentina. Since then it has gone through various transformations but the consistency in our values remains: We embrace spontaneity, respectful discussion and, most importantly, a sense of community.</p>
           </div>
+        </div>
+
+        <div className="separator-info d-flex">
+          <div id="info" className="text-center">
+            <div id="hiw-logo">
+              <Image src="/svg/how-it-works-v2.svg" alt="" width="270" height="165" />
+            </div>
+            <h3 className="hide-desktop">How It Works</h3>
+            <p>
+              We usually meet on Tuesdays in the afternoon. We announce the time and venue on the weekends via our Instagram account. <br/>
+              The meetings usually last 2 hours. We speak English the whole time and, while we allow speakers of any level to join, we do ask everyone to avoid speaking Spanish out of respect for those looking to practise their English.
+              <br/>
+              <br/>
+              During the meeting, we spend the first half hour chatting casually and then we split into smaller conversation groups. <br/>
+              Each group is assigned 1 or 2 team leaders who have prepared a topic with questions. If there are any newbies in the group, we ask everyone to introduce themselves before we get started with the topic. <br/>
+            </p>
+          </div>
+          {/*
+          <div id="decorator">
+            <Image src="/icons/g24.svg" alt="" width="50" height="50" />
+          </div>
+          */}
         </div>
 
         <div className="columns photos">
@@ -99,23 +124,7 @@ export default function Home() {
           <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/englishtalkcba/" className="follow" id="separate-follow">Follow Us!  <Image src="/icons/instagram.svg" alt="" width="12" height="12" /></a>
         </div>
 
-        <div className="separator-info d-flex">
-          <div id="info" className="text-center">
-            <h3>How It Works</h3>
-            <p>
-              We usually meet on Tuesdays in the afternoon. We announce the time and venue on the weekends via our Instagram account. <br/>
-              The meetings usually last 2 hours. We speak English the whole time and, while we allow speakers of any level to join, we do ask everyone to avoid speaking Spanish out of respect for those looking to practise their English.
-              <br/>
-              <br/>
-              During the meeting, we spend the first half hour chatting casually and then we split into smaller conversation groups. <br/>
-              Each group is assigned 1 or 2 team leaders who have prepared a topic with questions. If there are any newbies in the group, we ask everyone to introduce themselves before we get started with the topic. <br/>
-            </p>
-          </div>
-          <div id="decorator">
-            <Image src="/icons/g24.svg" alt="" width="50" height="50" />
-          </div>
-        </div>
-
+        {/*
         <div id="contact" className="background-red">
           <div>
             <h3>Contact Us</h3>
@@ -133,6 +142,14 @@ export default function Home() {
             <button id="form-button" className="background-blue text-white border-radius border-none" >Send</button>
           </form>
         </div>
+      */}
+      <div className="ig-follow">
+        <div id="decorator">
+          <Image src="/icons/g24.svg" alt="" width="50" height="50" />
+        </div>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/englishtalkcba/"><h3>Follow us on Instagram and never miss an event!</h3></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/englishtalkcba/"><Image src="/icons/instagram.svg" alt="" width="150" height="150" /></a>
+      </div>
       </main>
 
       <svg style={{ position: 'absolute' }} width="0" height="0">
@@ -153,10 +170,10 @@ export default function Home() {
         </defs>
       </svg>
 
-      <footer className="background-blue">
-        <div className="white">
+      <footer>
+        <div>
           <div className="footer-title">
-            <Image src="/favicon.svg" alt="" width="28" height="34" />
+            <Image src="/icons/etlogo-black.svg" alt="" width="46" height="68" />
             <h3>English Talk</h3>
           </div>
           <p>
@@ -166,8 +183,8 @@ export default function Home() {
           </p>
         </div>
         <div className="links">
-          <a className="background-white" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/englishtalkcba/"><Image src="/icons/instagram-blue.svg" alt="" width="20" height="20" /></a>         
-          <a className="background-white" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/englishtalkcba"><Image src="/icons/facebook-blue.svg" alt="" width="20" height="20" /></a>         
+          <a className="background-black" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/englishtalkcba/"><Image src="/icons/instagram.svg" alt="" width="20" height="20" /></a>         
+          <a className="background-black" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/englishtalkcba"><Image src="/icons/facebook.svg" alt="" width="20" height="20" /></a>         
         </div>
       </footer>
 
@@ -394,15 +411,20 @@ export default function Home() {
 
         .separator-info {
           position: relative;
+          /*
           background-image: linear-gradient(360deg, #154B82 12%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/background.png);
+          */
           display: flex;
           justify-content: center;
           margin-top: 4rem;
           padding: 1rem;
         }
 
-        :is(.separator, .separator-info) h3 {
+        :is(.separator) h3 {
           color: white;
+        }
+
+        :is(.separator, .separator-info) h3 {
           font-size: clamp(1.2rem, 1.4vw, 1.7rem);
           max-width: 46ch;
           margin-left: auto;
@@ -425,10 +447,13 @@ export default function Home() {
           width: 60px;
         }
 
+        :is(.separator) p {
+          color: white;
+        }
+
         :is(.separator, .separator-info) p {
           font-size: clamp(.8rem, .8vw, 0.98rem);
           max-width: 90ch;
-          color: white;
           margin-left: auto;
           margin-right: auto;
         }
@@ -444,6 +469,15 @@ export default function Home() {
           left: 20px;
         }
 
+        #logo-mobile {
+          display: none;
+        }
+
+        #hiw-logo {
+          padding: 1rem !important;
+          margin: auto 0;
+        }
+
         #about {
           grid-column: 2/3;
         }
@@ -453,6 +487,17 @@ export default function Home() {
           padding-left: 5%;
           padding-right: 5%;
           justify-content: space-between;
+          padding-bottom: 2rem;
+        }
+
+        footer h3 {
+          font-size: 2rem;
+          margin: auto 0;
+          padding-left: .5ch;
+        }
+
+        footer p {
+          margin: 0;
         }
 
         .footer-title {
@@ -482,7 +527,7 @@ export default function Home() {
 
         #decorator {
           position absolute;
-          bottom: -30px;
+          top: -20px;
         }
 
         .d-flex {
@@ -548,6 +593,22 @@ export default function Home() {
           padding: 10px;
         }
 
+        .ig-follow {
+          position: relative;
+          background: linear-gradient(254.65deg, #405DE6 -3.91%, #5851DB 8.02%, #833AB4 20.58%, #C13584 31.89%, #E1306C 44.45%, #FD1D1D 57.02%, #F56040 69.58%, #F77737 83.4%, #FCAF45 96.59%, #FFDC80 111.03%); 
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          padding: 5rem;
+          text-align: start;
+        }
+
+        .ig-follow h3 {
+          margin-top: 0;
+          color: white;
+          font-size: 4rem;
+          max-width: 9ch;
+        }
+
         .in-half {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -577,6 +638,10 @@ export default function Home() {
 
         .background-white {
           background-color: white !important;
+        }
+        
+        .background-black {
+          background-color: black !important;
         }
 
         .background-red {

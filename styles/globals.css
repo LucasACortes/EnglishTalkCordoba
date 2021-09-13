@@ -91,8 +91,33 @@ a {
     grid-template-columns: 1fr !important;
   } 
 
+  .separator {
+    grid-template-columns: 1fr !important;
+  }
+
+  #about {
+    grid-column: auto !important;
+  }
+
+  #logo-mobile {
+    display: block !important;
+    margin: auto 0;
+    padding-top: 1rem;
+  }
+
+  #hiw-logo {
+    display: none !important;
+  }
+
   .separator-info {
-    background: var(--blue) !important;
+    /* background: var(--blue) !important; */
+    margin-top: 1rem !important;
+    background: white !important;
+  }
+
+  .separator-info h3,
+  .separator-info p {
+    color: black !important;
   }
 
   #separate-follow {
@@ -100,6 +125,10 @@ a {
   }
 
   .inline-icon {
+    display: none !important;
+  }
+
+  #decorator {
     display: none !important;
   }
 }
@@ -115,6 +144,36 @@ a {
 
   .hero > * {
     margin: auto !important;
+  }
+}
+
+
+@media (min-width: 960px) {
+  .hide-desktop {
+    display: none !important;
+  }
+
+  #info {
+    display: grid !important;
+    grid-template-columns: max-content 2fr;
+  }
+
+  #info p {
+    column-count: 2;
+    text-align: start;
+  }
+
+  .ig-follow {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ig-follow h3 {
+    font-size: min(4vw, 3.8rem) !important;
+    margin: auto !important;
+    margin-right: 2rem !important;
+    max-width: 18ch !important;
   }
 }
 
