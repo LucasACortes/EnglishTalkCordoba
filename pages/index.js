@@ -297,7 +297,7 @@ export default function Home() {
         main .wrapper {
           margin-left: 12%;
           margin-right: 12%;
-          margin-bottom: 12em;
+          margin-bottom: 14em;
         }
         
         .hero {
@@ -452,7 +452,6 @@ export default function Home() {
         }
 
         :is(.separator, .separator-info) p {
-          font-size: clamp(.8rem, .8vw, 0.98rem);
           max-width: 90ch;
           margin-left: auto;
           margin-right: auto;
@@ -605,7 +604,7 @@ export default function Home() {
         .ig-follow h3 {
           margin-top: 0;
           color: white;
-          font-size: 4rem;
+          font-size: 3.4rem;
           max-width: 9ch;
         }
 

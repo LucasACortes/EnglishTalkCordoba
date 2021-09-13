@@ -21,7 +21,7 @@ a {
 
 * {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 :root {
@@ -64,7 +64,7 @@ a {
 
 @media (max-width: 460px) {
   main .wrapper {
-    margin-bottom: 8rem !important;
+    margin-bottom: 12rem !important;
   }
 }
 
@@ -159,6 +159,7 @@ a {
   }
 
   #info p {
+    padding-top: 15px;
     column-count: 2;
     text-align: start;
   }
